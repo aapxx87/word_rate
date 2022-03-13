@@ -111,10 +111,10 @@ ul {
 .tr_translate {
   font-size: 14px;
   text-align: left;
-  /* padding-left: 22px; */
   color: gray;
   margin-bottom: 40px;
   padding-bottom: 10px;
+  position: relative;
 }
 
 .rus_text {
@@ -122,6 +122,17 @@ ul {
   border-radius: 5px;
   padding: 5px 10px;
   color:var(--gray);
+}
+
+
+.delete_item_btn {
+  /* position: absolute;
+  top: -5px;
+  right: 10px; */
+  font-size: 21px;
+  font-weight: 300;
+  color: var(--red);
+  margin-right: 10px;
 }
 
 
