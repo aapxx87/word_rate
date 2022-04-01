@@ -90,38 +90,36 @@ ul {
   font-size: 14px;
   text-align: left;
   color: gray;
-  margin-bottom: 40px;
   padding-bottom: 10px;
   position: relative;
-  padding-left: 20px;
-}
-
-.tr_last_item {
-  padding-bottom: 25px;
-  padding-left: 20px;
+  margin-top: 10px;
 }
 
 .rus_text {
   border: 1px solid var(--gray);
   border-radius: 5px;
   padding: 5px 10px;
-  color:var(--gray);
+  color: gray;
+  display: inline-block;
+  transition: .3s;
 }
+
+.rus_text:hover {
+  border: 1px solid var(--orange-main);
+  color: var(--orange-main);
+}
+
+
 
 .tr-sentence {
-  padding-right: 15px;
+  padding-right: 10px;
   padding-bottom: 0;
-
 }
 
-
-.delete_item_btn {
-  font-size: 21px;
-  font-weight: 300;
-  color: var(--red);
-  margin-right: 10px;
+.delete_item_box {
+  display: flex;
+  justify-content: space-between;
 }
-
 
 
 
@@ -185,6 +183,28 @@ ul {
 .deactive {
   border: 1px solid var(--gray);
   color: var(--gray);
+}
+
+/* -- btn delete */
+
+
+.delete_item_btn {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255, 126, 126, 0.3);
+  margin-right: 10px;
+  border: 1px solid rgba(255, 126, 126, 0.3);
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: .3s;
+}
+
+.delete_item_btn:hover {
+  color: rgba(255, 126, 126, 0.5);
+  border: 1px solid rgba(255, 126, 126, 0.5);
+  background: rgba(255, 126, 126, 0.1);
+  cursor: pointer;
 }
 
 
@@ -259,6 +279,59 @@ ul {
   border-radius: 5px;
 
 }
+/* * RESULT BOX */
+
+.table_box_grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 50px;
+  gap: 10px;
+  padding: 18px;
+  transition: .3s;
+  border: 1px solid transparent;
+}
+
+
+.table_box_grid:hover {
+  border: 1px solid var(--orange-main);
+}
+
+.result_box .table_box_grid {
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+}
+
+.grid_cell-right {
+  text-align: center;
+  padding-left: 5px;
+}
+
+
+.cell_head {
+  color: var(--orange-main);
+  font-weight: 600;
+}
+
+
+/* * SAVE BOX */
+
+.grid_3_of_3 {
+  grid-column: 1/ span 3;
+}
+
+
+
+.save_container .table_box_grid:nth-child(odd) {
+  background-color: #27282b;
+} 
+
+.save_container {
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+}
+
+#header {
+  background-color: #202124;
+}
 :root {
   --orange-main: darkgoldenrod;
   --gray: #4b4b4b;
@@ -281,10 +354,6 @@ body {
 
 
 ::-webkit-scrollbar { display: none; }
-
-
-
-
 
 
 .container {
